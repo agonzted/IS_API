@@ -22,6 +22,8 @@ router.post('/', async (req, res) =>{
 
 router.get('/:id', async (req, res) =>{
     const { id } = req.params.id;
+    console.log(req.params);
+    console.log(req.params.id);
     await Product.remove({_id: id});
     if(err){
         res.send('bad reques')
