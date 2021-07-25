@@ -26,4 +26,10 @@ router.get('/:id', async (req, res) =>{
     res.redirect('/');s
 });
 
+router.post('/:id', async (req, res) =>{
+    const { id } = req.params;
+    await Product.update({_id: id}, req.body);
+    res.redirect('/');s
+});
+
 module.exports = router;
