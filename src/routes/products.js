@@ -23,11 +23,7 @@ router.post('/', async (req, res) =>{
 router.get('/:id', async (req, res) =>{
     const { id } = req.params;
     await Product.remove({_id: id});
-    if(err){
-        res.send('bad reques')
-    }else{
-        res.send('received')
-    }
+    res.redirect('/');s
 });
 
 module.exports = router;
