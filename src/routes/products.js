@@ -20,7 +20,7 @@ router.post('/', async (req, res) =>{
     }
 });
 
-router.delete('/:id', async (req, res) =>{
+router.get('/:id', async (req, res) =>{
     const { id } = req.params.id;
     await Product.remove({_id: id});
     if(err){
