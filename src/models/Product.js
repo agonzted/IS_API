@@ -8,6 +8,7 @@ const productSchema = new Schema({
     stock: String,
     expiration: String,
     isExpiration: String,
+    userEmail: String
 
 });
 
